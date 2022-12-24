@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music | Музыка</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./socket.io/socket.io.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script> -->
+  <script src="./js/howler.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="start-block" id="start-block">
+      <button id="start">Начать</button>
+    </div>
+
+    <div class="audios-list">
+      <div class="audios-list-header">
+        <p class="audios-list-next-tracks">Следующие 10 треков</p>
+      </div>
+      <div class="audios-list-container" id="audios-list-container"> </div>
+    </div>
+
+    <div class="panel">
+      <div class="info">
+
+        <div class="info-blocks">
+          <div class="info-block">
+            <label for="current-track-block" class="current-track-label">Текущий трек <span
+                id="audio-timer"></span></label>
+            <div class="current-track" id="current-track-block">
+              <p class="current-track-name"><span class="audio-name" id="current-track-name">-</span></p>
+              <p class="current-track-username" id="current-track-username">-</p>
+            </div>
+          </div>
+
+          <h1 id="empty-queue-message" class="empty-queue-message">Очередь пустая!</h1>
+
+          <div class="info-block">
+            <label for="next-track-block" class="next-track-label">Следующий трек</label>
+            <div class="next-track" id="next-track-block">
+              <p class="next-track-name"><span class="audio-name" id="next-track-name">-</span></p>
+              <p class="next-track-username" id="next-track-username">-</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bot-links">
+          <div class="bot-image"></div>
+        </div>
+
+      </div>
+      <div class="actions" id="actions">
+        <button id="toggle-pause-button">Пауза</button>
+        <button id="next-track-button">Следующий трек</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
